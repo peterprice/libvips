@@ -29,6 +29,7 @@ jobs:
       CXX: ${{ matrix.build.cxx }}
       LD: ${{ matrix.build.linker }}
       CPPFLAGS: -Wall
+      DEBIAN_FRONTEND: noninteractive
 
     steps:
       - name: Checkout code
@@ -37,8 +38,8 @@ jobs:
       - name: Install Ubuntu dependencies
         if: runner.os == 'Linux'
         run: |
-          sudo apt-get update
-          sudo apt-get install \
+          sudo apt-get update -y
+          sudo apt-get install -y \
             meson pkg-config \
             libarchive-dev libcfitsio-dev libcgif-dev \
             libexif-dev libexpat1-dev libffi-dev \
