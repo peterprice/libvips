@@ -21,7 +21,7 @@ jobs:
             build: { cc: clang-15, cxx: clang++-15, linker: ld.lld-15, sanitize: true }
 
           - name: "macOS (13.6) - Xcode 15.2"
-            os: Peters-MacBook-Pro
+            os: self-hosted
             build: { cc: clang, cxx: clang++, linker: ld.lld }
 
     env:
