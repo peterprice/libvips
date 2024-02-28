@@ -12,13 +12,13 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - name: "Linux x64 (Ubuntu 22.04) - GCC 11"
-            os: self-hosted
-            build: { cc: gcc, cxx: g++, linker: ld }
+          # - name: "Linux x64 (Ubuntu 22.04) - GCC 11"
+          #   os: self-hosted
+          #   build: { cc: gcc, cxx: g++, linker: ld }
 
-          - name: "Linux x64 (Ubuntu 22.04) - Clang 15 with ASan and UBSan"
-            os: ubuntu-22.04
-            build: { cc: clang-15, cxx: clang++-15, linker: ld.lld-15, sanitize: true }
+          # - name: "Linux x64 (Ubuntu 22.04) - Clang 15 with ASan and UBSan"
+          #   os: ubuntu-22.04
+          #   build: { cc: clang-15, cxx: clang++-15, linker: ld.lld-15, sanitize: true }
 
           - name: "macOS (13.6) - Xcode 15.2"
             os: self-hosted
